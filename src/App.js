@@ -4,7 +4,9 @@ import ContactList from "./Components/contactList/ContactList";
 import "./App.css";
 
 function App() {
-  const [contacts, setContacts] = useState([]);
+  const [contacts, setContacts] = useState(
+    JSON.parse(localStorage.getItem("contacts"))
+  );
 
   const addContactHandler = (contact) => {
     setContacts([
