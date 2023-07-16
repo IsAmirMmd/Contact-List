@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./AddContact.css";
 
 const AddContact = ({ addContactHandler }) => {
   const [contact, setContact] = useState({
