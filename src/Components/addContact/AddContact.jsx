@@ -14,6 +14,10 @@ const AddContact = ({ addContactHandler }) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
+    if (!contact.name || !contact.phone) {
+      alert("Both of fields are mandatory!");
+      return;
+    }
     addContactHandler(contact);
     setContact({
       name: "",
