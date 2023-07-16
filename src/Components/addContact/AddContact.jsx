@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const AddContact = () => {
+const AddContact = ({ addContactHandler }) => {
   const [contact, setContact] = useState({
     name: "",
     phone: "",
@@ -11,8 +11,17 @@ const AddContact = () => {
     setContact({ ...contact, [e.target.name]: e.target.value });
   };
 
+  const submitHandler = (e) => {
+    e.preventDefault();
+    addContactHandler(contact);
+    setContact({
+      name: "",
+      phone: "",
+    });
+  };
+
   return (
-    <form onSubmit={null}>
+    <form onSubmit={submitHandler}>
       <div className="form-control">
         <label>Name :</label>
         <input
@@ -34,7 +43,7 @@ const AddContact = () => {
         />
       </div>
       <div>
-        <button>Add Contact</button>
+        <button type="submit">Add Contact</button>
       </div>
     </form>
   );
