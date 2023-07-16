@@ -1,4 +1,4 @@
-const ContactList = ({ contacts }) => {
+const ContactList = ({ contacts, onDelete }) => {
   return contacts.map((contact) => (
     <div key={contact.id} className="contact--child">
       <div className="contact--image">
@@ -8,7 +8,7 @@ const ContactList = ({ contacts }) => {
         <p>{contact.name}</p>
         <p>{contact.phone}</p>
       </div>
-      <button className="contact--btn" onClick={null}>
+      <button className="contact--btn" onClick={() => onDelete(contact.id)}>
         delete
       </button>
     </div>
