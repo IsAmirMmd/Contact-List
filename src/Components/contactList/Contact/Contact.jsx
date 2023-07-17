@@ -1,7 +1,7 @@
 import userImage from "../../../assets/avatar.jpg";
 import { Link } from "react-router-dom";
 
-const Contact = ({ contact, onDelete }) => {
+const Contact = ({ contact, onDelete, onEdit }) => {
   return (
     <div key={contact.id} className="contact--child">
       <div className="contact--image">
@@ -22,6 +22,13 @@ const Contact = ({ contact, onDelete }) => {
       <button className="contact--btn" onClick={() => onDelete(contact.id)}>
         delete
       </button>
+      <Link
+        to={`edit/${contact.id}`}
+        state={{ contact }}
+        className="contact--btn"
+      >
+        edit
+      </Link>
     </div>
   );
 };

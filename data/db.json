@@ -1,32 +1,22 @@
 {
   "contacts": [
     {
-      "id": 145,
-      "name": "json-server",
-      "phone": "5855558"
+      "name": "json-serverafd",
+      "phone": "5855558",
+      "id": 145
     },
     {
-      "name": "holy ship",
+      "name": "holy shit",
       "phone": "5555555",
       "id": 146
     },
     {
-      "name": "spjdam'",
-      "phone": "88",
-      "id": 147
-    },
-    {
-      "name": "hajAhmad",
-      "phone": "8555",
-      "id": 148
-    },
-    {
-      "name": "lknfkls",
+      "name": "spiderMna",
       "phone": "5555",
       "id": 149
     },
     {
-      "name": "amur4",
+      "name": "amur4amir",
       "phone": "456545465",
       "id": 150
     }
