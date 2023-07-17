@@ -3,6 +3,7 @@ import AddContact from "./Components/addContact/AddContact";
 import ContactList from "./Components/contactList/ContactList";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
+import ContactDetails from "./Components/ContactDetails/ContactDetails";
 
 function App() {
   const [contacts, setContacts] = useState(
@@ -35,27 +36,26 @@ function App() {
   return (
     <div className="App">
       <h1>Contact List</h1>
-      <switch>
-        <Routes>
-          <Route
-            path="/"
-            exact
-            Component={(props) => (
-              <ContactList
-                contacts={contacts}
-                onDelete={deleteContactHandler}
-                {...props}
-              />
-            )}
-          />
-          <Route
-            path="/add"
-            Component={(props) => (
-              <AddContact addContactHandler={addContactHandler} {...props} />
-            )}
-          />
-        </Routes>
-      </switch>
+      <Routes>
+        <Route path="/user/:id" Component={ContactDetails} />
+        <Route
+          path="/"
+          exact
+          Component={(props) => (
+            <ContactList
+              contacts={contacts}
+              onDelete={deleteContactHandler}
+              {...props}
+            />
+          )}
+        />
+        <Route
+          path="/add"
+          Component={(props) => (
+            <AddContact addContactHandler={addContactHandler} {...props} />
+          )}
+        />
+      </Routes>
     </div>
   );
 }
