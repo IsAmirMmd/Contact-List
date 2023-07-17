@@ -68,3 +68,27 @@
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
+#search {
+  outline: 0;
+  width: 400px;
+  padding: 4px 4px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease-in-out;
+}
+#search:focus {
+  border: 1px solid #4299e1;
+  box-shadow: 0px 0px 5px #4299e1;
+}
+.warning {
+  background-color:red;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f6dfdf;
+  height: 50px;
+  margin: 16px auto;
+  border-radius: 4px;
+}
