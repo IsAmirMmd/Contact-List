@@ -19,16 +19,21 @@ const Contact = ({ contact, onDelete, onEdit }) => {
           num : +98{contact.phone}
         </a>
       </div>
-      <button className="contact--btn" onClick={() => onDelete(contact.id)}>
-        delete
-      </button>
-      <Link
-        to={`edit/${contact.id}`}
-        state={{ contact }}
-        className="contact--btn"
-      >
-        edit
-      </Link>
+      <div className="button-holder">
+        <Link
+          to={`edit/${contact.id}`}
+          state={{ contact }}
+          className="contact--btn edit-btn"
+        >
+          edit
+        </Link>
+        <button
+          className="contact--btn delete-btn"
+          onClick={() => onDelete(contact.id)}
+        >
+          delete
+        </button>
+      </div>
     </div>
   );
 };

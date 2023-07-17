@@ -40,6 +40,7 @@
   padding: 5px 10px;
   border-radius: 5px;
   margin-left: auto;
+  font-size: 14px;
   background-color: #fff5f5;
   cursor: pointer;
 }
@@ -54,4 +55,16 @@
   border-radius: 4px;
   padding: 4px 10px;
   text-decoration: none;
+}
+.button-holder {
+  display: flex;
+  margin-left: auto;
+}
+.edit-btn {
+  background-color: #4299e1;
+  text-decoration: none;
+  border: 1px solid #4299e1;
+  color: white;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
