@@ -8,11 +8,15 @@ const Contact = ({ contact, onDelete }) => {
         <img src={userImage} alt="profile" />
       </div>
       <div className="contact--user">
-        <Link to={`user/${contact.id}`} state={{ contact }}>
+        <Link
+          to={`user/${contact.id}`}
+          state={{ contact }}
+          className="contactLink"
+        >
           name : {contact.name}
         </Link>
         <a href={`tel:+98${contact.phone}`} className="contact--user__phone">
-          +98{contact.phone}
+          num : +98{contact.phone}
         </a>
       </div>
       <button className="contact--btn" onClick={() => onDelete(contact.id)}>

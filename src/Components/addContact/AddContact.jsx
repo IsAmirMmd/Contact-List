@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./AddContact.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const AddContact = ({ addContactHandler }) => {
   const [contact, setContact] = useState({
@@ -53,6 +53,9 @@ const AddContact = ({ addContactHandler }) => {
       </div>
       <div>
         <button type="submit">Add Contact</button>
+      </div>
+      <div>
+        <Link className="back-cta" to="/">Home Page</Link>
       </div>
     </form>
   );

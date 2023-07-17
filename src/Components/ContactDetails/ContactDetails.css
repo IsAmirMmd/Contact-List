@@ -1,0 +1,34 @@
+.contact-detail {
+  margin: 20px auto !important;
+  max-width: 400px;
+  text-align: left;
+  background-color: #ccdfef;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #353535;
+}
+.contact-detail > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.contact-detail .LinkBtn {
+  color: #fff;
+  background: #4299e1;
+  border-radius: 4px;
+  padding: 4px 10px;
+  text-decoration: none;
+}
+.cta-btn {
+  color: #fff;
+  background: #27bd13;
+  border-radius: 4px;
+  padding: 4px 10px;
+  text-decoration: none;
+}
+.btn-div {
+  margin-top: 35px !important;
+  margin-bottom: 0 !important;
+}
